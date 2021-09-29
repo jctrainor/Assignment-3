@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <!--wrapper-->
+    <div class ="wrapper">
+      <nav class="navbar">
+          <img class="logo" src="logo.png">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Cal.HTML">calendar</a></li>
+              <li><a href="notepad.html">notes</a></li>
+              <li><a href="login.html">Login</a></li>
+          </ul>       
+      </nav>
+  </div>
+
+
+<!--Login forum-->
+<form action="action_page.php" method="post">
+  <div class="container">
+
+    
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login<a href="index.html"></a></button>
+        
+    <!--setup for selector-->
+      <div id="app">
+          <p>{{ message }}</p> <!--displays the message the user has chosen (save or dont save password)-->
+          <select v-model="selected">
+              <option disabled value="">Please select one</option>
+              <option>Remember me</option> <!--option 1, which will save password for when they log in next-->
+              <option>Don't Remember me</option> <!--option 2, which wont save password for when they log in next-->
+            </select>
+            <span>Selected: {{ selected }}</span> <!--dispalys users optin in plain text-->
+      </div>
+      
+      <script src="vue.js"></script>
+  </div>
+
+  <div class="container" style="background-color: transparent">
+    <button type="button" class="cancelbtn">Cancel</button> <!--button to cancel signup-->
+    <span class="psw">Forgot <a href="#">password?</a></span> <!--forgot password option-->
+    <br>
+    <span class="psw">create <a href="Register.html">new account</a></span> <!--link to create account-->
+  </div>
+</form>
+
+<!--footer-->
+<footer>
+  <div class="footer-content">
+      <h3>contact us</h3>
+      <p>phone number: <a href="04 123 492 282">04 123 492 282</p>
+        <ul class="social">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </ul>
+  </div>
+</footer>
+</html>

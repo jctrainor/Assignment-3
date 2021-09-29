@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<!--wrapper-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class ="wrapper">
+    <nav class="navbar">
+        <img class="logo" src="logo.png">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Cal.HTML">calendar</a></li>
+            <li><a href="notepad.html">notes</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>       
+    </nav>
+</div>
+
+<!--Registration forum-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<form action="action_page.php" method="post">
+  <div class="container">
+
+    <!--creates textbox for a users response of each category (first name, last name, username and password)-->
+    <label for="First_name"><b>First name</b></label>
+    <input type="text" placeholder="First name" name="fname" required>
+
+    <label for="Last_name"><b>Last name</b></label>
+    <input type="text" placeholder="Last name" name="Lname" required>
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="E Password" name="psw" required>
+
+    <button type="submit">Register<a href="index.html"></a></button>
+
+    <!--function for user to choose to either do or dont remember login credentials-->
+    <div id="app"> <!--ID for vue function-->
+        <p>{{ message }}</p> <!--displays a message, passed through vue-->
+        <select v-model="selected">
+            <option disabled value="">Please select one</option> <!--value that cannot be selected by user, stating to choose their option-->
+            <option>Remember me</option> 
+            <option>Don't Remember me</option>
+        </select>
+        <span>Selected: {{ selected }}</span> <!--displays users option-->
+    </div>
+    
+    <script src="vue.js"></script>
+  </div>
+
+  <div class="container" style="background-color: transparent">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>
+
+<!--footer-->
+<footer>
+  <div class="footer-content">
+      <h3>contact us</h3>
+      <p>phone number: <a href="04 123 492 282">04 123 492 282</p>
+        <ul class="social">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </ul>
+  </div>
+</footer>
+</html>
